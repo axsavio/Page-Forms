@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Alex Sávio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="screen">
+        <div class="leftside">
+            <h1>Organize seus Gastos Online</h1>
+            <img src="images/financial_data.jpg" alt="" />
+            <h2>Organize suas finanças e tenha uma análise completa de suas contas 100% Online e Seguro. Saiba como Organizar suas Finanças. <a href="">  Saiba mais!</a><br> <h3>Cadastre-se em nosso Sistema!!</h3></h2>
+        </div>
+        <div class="rightside">
+            <h1>Cadastre-se </h1>
+
+            <form method="POST" class="validator" action="InserirCliente.jsp" >
+                <label>
+                    Seu nome: <br/>
+                    <input type="text" name="name"  data-rules="required"/>
+                </label>
+                <label>
+                    CPF: <br/>
+                    <input class="cpf"  type="text" name="cpf" maxlength="14" placeholder="000.000.000-00"  data-rules="required|min=14"/>
+                </label>
+                <label>
+                    Seu e-mail: <br/>
+                    <input type="email" name="email" data-rules="required"/>
+                </label>
+                <label>
+                    Data de Nascimento: <br/>
+                    <input type="date" maxlength="10"  name="date"  data-rules="required"/>
+                </label>
+                <label>
+                    Sexo: <br/>
+                    <div class="radio">
+                         <input type="radio" name="sexo" value="Masculino"> 
+                        <label for="Masculino">Masculino</label>
+                        <input type="radio" name="sexo" value="Feminino"> 
+                        <label for="Feminino">Feminino</label>
+                    </div>   
+                </label>
+                <label>
+                    Sua senha: 
+                    <input type="password" name="password"  id="password" data-rules="required|min=8"/>
+                </label>
+                <label>
+                    Confirme sua senha: 
+                    <input type="password" name="password" id="confirm_password" data-rules="required|min=8"/>
+                </label>
+                
+                    <div class="button">
+                        <input type="submit" value="Cadastre-se"  class="submit"/>
+                        <input type="reset" value="Cancelar" />
+                    </div>
+                    
+            </form>
+
+            <div class="login">
+                Já tem uma conta? <a href="">  Faça o Login</a>
+            </div>
+
+        </div>
+    </div>
+    <footer>Site criado por Alex Sávio</footer>
+
+<script src="script.js"></script>    
+</body>
+</html>
